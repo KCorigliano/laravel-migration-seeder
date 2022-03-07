@@ -12,18 +12,14 @@ class placeToVisitTableSeeder extends Seeder
      */
     public function run(Faker $faker)
     {
-        for ($i = 0; $i < 10; $i++) {
-        $branch = new Branch();
+        $place = new placeToVisitTableSeeder();
 
-        $branch->address = $faker->streetAddress();
-        $branch->city = $faker->city();
-        $branch->region = $faker->state();
-        $branch->province = $faker->word();
-        $branch->country = $faker->country();
-        $branch->description = $faker->realText();
-        $branch->squareMeters = $faker->numberBetween(40, 900);
-
-        $branch->save();
-        }
+        $place->address = $faker->streetAddress();
+        $place->city = $faker->city();
+        $place->region = $faker->state();
+        $place->province = $faker->word();
+        $place->country = $faker->country();
+        $place->description = $faker->realText();
+        $place->squareMeters = $faker->numberBetween(40, 900);
     }
 }
